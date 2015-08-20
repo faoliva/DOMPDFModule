@@ -145,7 +145,7 @@ return array(
          *
          * @see CPDF_Adapter::PAPER_SIZES for valid sizes
          */
-        'default_paper_size' => 'letter',
+        'default_paper_size' => 'A4',
 
         /**
          * The default font family
@@ -231,7 +231,7 @@ return array(
          *
          * @var bool
          */
-        'enable_remote' => false,
+        'enable_remote' => true,
 
         /**
          * The debug output log
@@ -255,7 +255,7 @@ return array(
         /**
          * Use the more-than-experimental HTML5 Lib parser
          */
-        'enable_html5parser' => false,
+        'enable_html5parser' => true,
 
         'debug_png'	=> false,
         'debug_keep_temp' => false,
