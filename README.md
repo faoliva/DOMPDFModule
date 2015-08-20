@@ -21,7 +21,7 @@ PHP Composer, please visit the official [PHP Composer site](http://getcomposer.o
      ```json
      {
          "require": {
-             "dino/dompdf-module": "dev-master"
+             "faoliva/dompdf-module": "dev-master"
          }
      }
      ```
