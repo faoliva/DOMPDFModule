@@ -85,7 +85,7 @@ class PdfRenderer implements Renderer
     	return $this->serviceLocator;
     }
 
-    function setServiceLocator(ServiceLocatorInterface $serviceLocator) 
+    function setServiceLocator(ServiceLocator $serviceLocator) 
     {
         $this->serviceLocator = $serviceLocator;
         return $this;
