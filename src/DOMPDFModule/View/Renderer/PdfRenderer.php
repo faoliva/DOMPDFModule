@@ -41,9 +41,9 @@ class PdfRenderer implements Renderer
     }
     
     /**
-	 * 
-	 * @return \DOMPDF
-	 */
+     * 
+     * @return \DOMPDF
+     */
     public function getEngine()
     {
         return $this->serviceLocator->get('dompdf');
