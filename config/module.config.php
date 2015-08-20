@@ -285,7 +285,7 @@ return array(
             'ViewPdfStrategy' => __NAMESPACE__ . '\Mvc\Service\ViewPdfStrategyFactory',
         ),
         'invokables' => array(
-			'PdfViewModel'	  => __NAMESPACE__ . '\View\Model\PdfModel',
-		)
+            'PdfViewModel'	  => __NAMESPACE__ . '\View\Model\PdfModel',
+        )
     ),
 );
