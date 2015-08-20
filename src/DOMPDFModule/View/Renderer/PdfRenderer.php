@@ -21,11 +21,10 @@ namespace DOMPDFModule\View\Renderer;
 
 use Zend\View\Renderer\RendererInterface as Renderer;
 use Zend\View\Resolver\ResolverInterface as Resolver;
-use DOMPDF;
 
 class PdfRenderer implements Renderer
 {
-    private $dompdf = null;
+    private $serviceLocator = null;
     private $resolver = null;
     private $htmlRenderer = null;
     
@@ -40,15 +39,13 @@ class PdfRenderer implements Renderer
         return $this->htmlRenderer;
     }
     
-    public function setEngine(DOMPDF $dompdf)
-    {
-        $this->dompdf = $dompdf;
-        return $this;
-    }
-    
+    /**
+	 * 
+	 * @return \DOMPDF
+	 */
     public function getEngine()
     {
-        return $this->dompdf;
+        return $this->serviceLocator->get('dompdf');
     }
     
     /**
@@ -81,4 +78,14 @@ class PdfRenderer implements Renderer
         $this->resolver = $resolver;
         return $this;
     }
+    
+    function getServiceLocator() 
+    {
+		return $this->serviceLocator;
+	}
+
+	function setServiceLocator(ServiceLocatorInterface $serviceLocator) 
+	{
+		$this->serviceLocator = $serviceLocator;
+	}
 }
