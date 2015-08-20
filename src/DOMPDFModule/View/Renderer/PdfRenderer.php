@@ -21,6 +21,7 @@ namespace DOMPDFModule\View\Renderer;
 
 use Zend\View\Renderer\RendererInterface as Renderer;
 use Zend\View\Resolver\ResolverInterface as Resolver;
+use Zend\ServiceManager\ServiceLocatorInterface as ServiceLocator;
 
 class PdfRenderer implements Renderer
 {
