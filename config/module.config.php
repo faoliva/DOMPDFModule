@@ -283,6 +283,9 @@ return array(
             'DOMPDF'          => __NAMESPACE__ . '\Service\DOMPDFFactory',
             'ViewPdfRenderer' => __NAMESPACE__ . '\Mvc\Service\ViewPdfRendererFactory',
             'ViewPdfStrategy' => __NAMESPACE__ . '\Mvc\Service\ViewPdfStrategyFactory',
-        )
+        ),
+        'invokables' => array(
+			'PdfViewModel'	  => __NAMESPACE__ . '\View\Model\PdfModel',
+		)
     ),
 );
