@@ -57,7 +57,14 @@ class DOMPDFFactory implements FactoryInterface
         'debug_layout_links'        => 'DEBUG_LAYOUT_LINES',
         'debug_layout_blocks'       => 'DEBUG_LAYOUT_BLOCKS',
         'debug_layout_inline'       => 'DEBUG_LAYOUT_INLINE',
-        'debug_layout_padding_box'  => 'DEBUG_LAYOUT_PADDINGBOX'
+        'debug_layout_padding_box'  => 'DEBUG_LAYOUT_PADDINGBOX',
+        'dompdf_dir'				=> 'DOMPDF_DIR',
+        'dompdf_inc_dir'			=> 'DOMPDF_INC_DIR',
+        'dompdf_inc_dir'			=> 'DOMPDF_INC_DIR',
+        'dompdf_lib_dir'			=> 'DOMPDF_LIB_DIR',
+        'dompdf_autoload_prepend'	=> 'DOMPDF_AUTOLOAD_PREPEND',
+        'dompdf_admin_username'		=> 'DOMPDF_ADMIN_USERNAME',
+        'dompdf_admin_password'		=> 'DOMPDF_ADMIN_PASSWORD'
     );
     
     /**
