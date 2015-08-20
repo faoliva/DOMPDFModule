@@ -28,7 +28,7 @@ class PdfModel extends ViewModel
      * @var array
      */
     protected $options = array(
-        'paperSize' => '8x11',
+        'paperSize' => 'A4',
         'paperOrientation' => 'portrait',
         'basePath' => '/',
         'fileName' => null
