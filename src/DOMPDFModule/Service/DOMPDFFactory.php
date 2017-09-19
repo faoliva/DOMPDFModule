@@ -21,7 +21,7 @@ namespace DOMPDFModule\Service;
 
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
-use DOMPDF;
+use Dompdf\Dompdf;
 
 class DOMPDFFactory implements FactoryInterface
 {
@@ -114,12 +114,8 @@ class DOMPDFFactory implements FactoryInterface
             
             define(static::$configCompatMapping[$key], $value);
         }
-		
-        require_once DOMPDF_LIB_DIR . '/html5lib/Parser.php';
-        require_once DOMPDF_INC_DIR . '/functions.inc.php';
-        require_once __DIR__ . '/../../../config/module.compat.php';
-        
-        return new DOMPDF();
+	      
+        return new Dompdf();
     }
 }
 
