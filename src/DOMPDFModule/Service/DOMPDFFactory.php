@@ -37,8 +37,8 @@ class DOMPDFFactory implements FactoryInterface
         $config = $serviceLocator->get('config');
         $config = $config['dompdf_module'];
         
-	$domPdfOptions = new ;
-	foreach ($config as $key => $value) {
+        $domPdfOptions = new Options();
+        foreach ($config as $key => $value) {
             $domPdfOptions->set($key, $value)
         }
         return new Dompdf($domPdfOptions);
