@@ -31,7 +31,7 @@ return array(
          *
          * *Please note the trailing slash.*
          */
-        'font_directory' => __DIR__ . '/../../../dompdf/dompdf/lib/fonts/',
+        'font_dir' => __DIR__ . '/../../../dompdf/dompdf/lib/fonts/',
 
         /**
          * The location of the DOMPDF font cache directory
@@ -41,7 +41,7 @@ return array(
          * It contains the .afm files, on demand parsed, converted to php syntax and cached
          * This folder can be the same as DOMPDF_FONT_DIR
          */
-        'font_cache_directory' => __DIR__ . '/../../../dompdf/dompdf/lib/fonts/',
+        'font_cache' => __DIR__ . '/../../../../data/dompdf/fonts/cache/',
 
         /**
          * The location of a temporary directory.
@@ -50,7 +50,7 @@ return array(
          * The temporary directory is required to download remote images and when
          * using the PFDLib back end.
          */
-        'temporary_directory' => sys_get_temp_dir(),
+        'temp_dir' => __DIR__ . '/../../../../data/dompdf/temp',
 
         /**
          * ==== IMPORTANT ====
@@ -65,6 +65,12 @@ return array(
          * $dompdf = new DOMPDF();	$dompdf->load_html($htmldata); $dompdf->render(); $pdfdata = $dompdf->output();
          */
         'chroot' => realpath(__DIR__ . '/../../../dompdf/dompdf/'),
+
+		 /**
+         * The debug output log
+         * @var string
+         */
+        'log_output_file' => __DIR__ . '/../../data/dompdf/log',
 
         /**
          * Whether to use Unicode fonts or not.
@@ -145,7 +151,7 @@ return array(
          *
          * @see CPDF_Adapter::PAPER_SIZES for valid sizes
          */
-        'default_paper_size' => 'A4',
+        'default_paper_size' => 'a4',
 
         /**
          * The default font family
@@ -232,12 +238,6 @@ return array(
          * @var bool
          */
         'enable_remote' => true,
-
-        /**
-         * The debug output log
-         * @var string
-         */
-        'log_output_file' => __DIR__ . '/../../data/dompdf/log',
 
         /**
          * A ratio applied to the fonts height to be more like browsers' line height
