@@ -39,7 +39,7 @@ class DOMPDFFactory implements FactoryInterface
         
         $domPdfOptions = new Options();
         foreach ($config as $key => $value) {
-            $domPdfOptions->set($key, $value)
+            $domPdfOptions->set($key, $value);
         }
         return new Dompdf($domPdfOptions);
     }
